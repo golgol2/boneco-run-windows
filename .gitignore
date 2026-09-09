@@ -1,0 +1,10 @@
+app/runtime/state/
+app/**/__pycache__/
+app/**/*.pyc
+installer/bin/
+installer/obj/
+installer/out-win*/
+installer/payload.zip
+dist/
+*.log
+*.tmp

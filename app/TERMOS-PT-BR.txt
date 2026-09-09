@@ -1,0 +1,124 @@
+TERMOS DE USO, LICENCA E PROTECAO DE DADOS
+BONECO RUN WINDOWS
+
+Estes termos regulam a instalacao e o uso do BONECO RUN Windows.
+Ao instalar, copiar ou usar o programa, o usuario declara que leu,
+entendeu e aceitou estes termos.
+
+1. TITULARIDADE E DIREITOS
+
+O BONECO RUN Windows, sua interface, scripts, fluxos, automacoes,
+marcas, materiais, documentacao, recursos visuais e demais componentes
+sao protegidos por direitos de propriedade intelectual e pertencem a:
+
+I Data Tecnologie
+CNPJ: 22.045.469/0001-80
+Responsavel: Thiago Brinatti Alves
+
+Todos os direitos nao concedidos expressamente permanecem reservados.
+E vedado copiar, revender, sublicenciar, distribuir, publicar, remover
+identificacoes, alterar marcas, praticar engenharia reversa, desmontar,
+descompilar ou criar produtos derivados sem autorizacao previa e expressa
+da titular.
+
+2. LICENCA DE USO
+
+A instalacao concede ao usuario apenas uma licenca limitada, revogavel,
+nao exclusiva e intransferivel para usar o BONECO RUN Windows no
+computador autorizado, conforme as funcionalidades disponibilizadas.
+A licenca nao transfere a propriedade do software.
+
+3. FINALIDADE DO SOFTWARE
+
+O BONECO RUN Windows atua como ferramenta local para executar comandos,
+abrir integracoes, operar navegador, controlar fluxos autorizados pelo
+usuario, transmitir status e facilitar a comunicacao entre uma IA, o
+computador e dispositivos conectados.
+
+O software nao substitui a supervisao humana. O usuario continua
+responsavel por revisar comandos, autorizar acessos, definir escopos de
+uso e acompanhar operacoes sensiveis.
+
+4. RESPONSABILIDADES DO USUARIO
+
+O usuario se compromete a:
+
+- usar o software de forma licita;
+- nao executar comandos que violem direitos de terceiros;
+- proteger senhas, tokens, cookies, chaves privadas e credenciais;
+- conferir o escopo de pastas, unidades de disco e servicos conectados;
+- manter copias de seguranca de dados importantes;
+- validar resultados antes de usar em producao;
+- respeitar termos de terceiros, incluindo sistemas operacionais,
+  navegadores, plataformas de IA, bancos de dados, servidores e APIs.
+
+5. DADOS, PRIVACIDADE E SEGURANCA
+
+O BONECO RUN Windows foi concebido com abordagem local-first. Conforme a
+configuracao utilizada, o programa pode processar localmente ou transmitir
+tecnicamente dados como identificador de dispositivo, codigo de
+pareamento, estado de conexao, status de tarefa, logs tecnicos,
+configuracoes de projeto e mensagens necessarias ao fluxo solicitado.
+
+O servidor de pareamento/mobile, quando usado, deve atuar como ponte de
+conexao entre dispositivos autorizados, priorizando o redirecionamento de
+fluxo e evitando armazenamento desnecessario de comandos completos.
+
+Credenciais sensiveis nao devem ser inseridas em prompts nem expostas a
+terceiros. Quando houver suporte a cofres do sistema operacional, eles
+devem ser preferidos para armazenar segredos.
+
+O tratamento de dados deve observar a legislacao aplicavel, incluindo a
+Lei Geral de Protecao de Dados Pessoais (LGPD), quando aplicavel. Pedidos
+relacionados a dados pessoais devem ser encaminhados pelos canais oficiais
+da I Data Tecnologie.
+
+6. LIMITACOES E RISCOS
+
+Automacoes podem alterar arquivos, executar comandos, instalar pacotes,
+acessar rede, iniciar processos, interagir com navegadores e usar
+servicos de terceiros. O usuario deve configurar limites de acesso e nao
+autorizar operacoes que nao compreenda ou nao deseje executar.
+
+O software e fornecido no estado em que se encontra, sem garantia de
+funcionamento ininterrupto, ausencia de erros, compatibilidade universal
+ou adequacao a finalidade especifica.
+
+7. SERVICOS E COMPONENTES DE TERCEIROS
+
+O BONECO RUN Windows pode depender de componentes ou servicos como
+Windows, Python, Microsoft Edge, Google Chrome, ChatGPT, plataformas de
+IA, APIs, bancos de dados, bibliotecas e servidores externos. Esses
+componentes possuem termos e politicas proprios, que devem ser respeitados
+pelo usuario.
+
+8. PROIBICOES
+
+E proibido usar o software para:
+
+- invadir sistemas;
+- violar controles de acesso;
+- coletar dados sem autorizacao;
+- distribuir malware ou conteudo ilicito;
+- fraudar sistemas;
+- ocultar autoria de operacoes indevidas;
+- prejudicar terceiros ou a infraestrutura da titular.
+
+9. REVOGACAO E ENCERRAMENTO
+
+A titular pode suspender ou revogar licencas em caso de uso indevido,
+violacao destes termos, risco juridico, risco operacional ou violacao de
+direitos. O usuario pode interromper o uso removendo o software e suas
+configuracoes locais.
+
+10. ALTERACOES DOS TERMOS
+
+Estes termos podem ser atualizados conforme evolucao do produto, alteracao
+legal, requisitos de seguranca ou mudancas comerciais. Versoes futuras
+podem exigir novo aceite.
+
+11. ACEITE
+
+Ao prosseguir com a instalacao, o usuario declara aceitar integralmente
+estes termos, reconhecendo a titularidade da I Data Tecnologie e os
+direitos reservados sobre o BONECO RUN Windows.

@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "download_url": "https://github.com/golgol2/boneco-run-windows/releases/latest/download/BONECO_RUN_WINDOWS_INSTALLER.exe",
+  "sha256": "612ea846ab8c637f68a9924dd547e93313346875609df0b18d3db4bbe7906ff5",
+  "notes": [
+    "Instalador grafico em arquivo unico.",
+    "Correcao de instalacao em caminhos com espaco.",
+    "API local separada do gateway mobile.",
+    "Agente mobile inicia automaticamente apos registro ou pareamento.",
+    "Sanitizacao contra embedded null character.",
+    "Verificacao de atualizacao pelo painel Windows."
+  ]
+}

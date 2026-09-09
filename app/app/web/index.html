@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BONECO RUN Windows</title>
+  <link rel="icon" type="image/png" href="/assets/boneco-run.png">
+  <link rel="shortcut icon" href="/assets/boneco-run.ico">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="brand-mark" src="/assets/boneco-run.png" alt="" aria-hidden="true">
+        <div>
+          <strong>BONECO RUN</strong>
+          <span>Windows</span>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Areas">
+        <button class="nav-item active" data-view="command">Comando</button>
+        <button class="nav-item" data-view="mobile">Celular</button>
+        <button class="nav-item" data-view="browser">ChatGPT</button>
+        <button class="nav-item" data-view="api">API Local</button>
+        <button class="nav-item" data-view="project">Projeto</button>
+        <button class="nav-item" data-view="logs">Logs</button>
+      </nav>
+      <div class="sidebar-status">
+        <span id="statusDot" class="dot"></span>
+        <span id="compactStatus">Carregando</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="viewTitle">Comando</h1>
+          <p id="viewSubtitle">Controle o computador Windows selecionado.</p>
+        </div>
+        <div class="top-actions">
+          <button id="checkUpdateBtn" class="btn">Atualizacao</button>
+          <button id="refreshBtn" class="btn">Atualizar</button>
+          <button id="openProjectBrowserBtn" class="btn primary">Abrir ChatGPT Projeto</button>
+        </div>
+      </header>
+
+      <section class="status-grid" aria-label="Status">
+        <div>
+          <span>Estado</span>
+          <strong id="jobState">-</strong>
+        </div>
+        <div>
+          <span>Etapa</span>
+          <strong id="jobStep">-</strong>
+        </div>
+        <div>
+          <span>Celular</span>
+          <strong id="mobileState">-</strong>
+        </div>
+        <div>
+          <span>Projeto</span>
+          <strong id="projectBrowserState">-</strong>
+        </div>
+      </section>
+
+      <section id="view-command" class="view active">
+        <div class="split">
+          <div class="pane stretch">
+            <label for="goalInput">Objetivo</label>
+            <textarea id="goalInput" spellcheck="true" placeholder="Digite o que o BONECO RUN Windows deve fazer neste computador"></textarea>
+            <div class="action-row">
+              <button id="startJobBtn" class="btn primary">Enviar para IA do projeto</button>
+              <button id="cancelJobBtn" class="btn danger">Cancelar tarefa</button>
+            </div>
+          </div>
+          <div class="pane">
+            <h2>Retorno</h2>
+            <pre id="lastResult" class="log-box">Aguardando tarefa.</pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-mobile" class="view">
+        <div class="split">
+          <div class="pane">
+            <h2>Conexao do celular</h2>
+            <div class="form-grid">
+              <label>
+                E-mail
+                <input id="emailInput" type="email" autocomplete="username">
+              </label>
+              <label>
+                Senha
+                <input id="passwordInput" type="password" autocomplete="current-password">
+              </label>
+            </div>
+            <div class="action-row">
+              <button id="registerPcBtn" class="btn primary">Registrar PC</button>
+              <button id="pairingBtn" class="btn">Gerar pareamento</button>
+              <button id="startAgentBtn" class="btn">Iniciar agente</button>
+              <button id="stopAgentBtn" class="btn danger">Parar agente</button>
+            </div>
+          </div>
+          <div class="pane">
+            <h2>Codigo</h2>
+            <div id="pairingCode" class="pairing-code">-</div>
+            <button id="copyPairingBtn" class="btn">Copiar codigo</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-browser" class="view">
+        <div class="split">
+          <div class="pane">
+            <h2>ChatGPT Projeto</h2>
+            <label>
+              URL
+              <input id="chatgptProjectUrl" type="url" placeholder="https://chatgpt.com/...">
+            </label>
+            <div class="action-row">
+              <button id="saveProjectChatUrlBtn" class="btn">Salvar URL</button>
+              <button id="ensureProjectBtn" class="btn primary">Abrir janela limpa</button>
+              <button id="overlayProjectBtn" class="btn">Comando sobre ChatGPT</button>
+              <button id="stopProjectBtn" class="btn danger">Parar</button>
+            </div>
+            <div class="action-row auth-row">
+              <button id="loginProjectChatBtn" class="btn">Login pelo ChatGPT</button>
+              <button id="loginProjectGoogleBtn" class="btn">Perfil Google Chrome</button>
+            </div>
+            <p class="hint">Login abre janela normal. Depois da sessao salva, o uso diario abre janela limpa.</p>
+          </div>
+          <div class="pane">
+            <h2>ChatGPT API Local</h2>
+            <label>
+              URL
+              <input id="chatgptApiUrl" type="url" placeholder="https://chatgpt.com/...">
+            </label>
+            <div class="action-row">
+              <button id="saveApiChatUrlBtn" class="btn">Salvar URL</button>
+              <button id="ensureApiBtn" class="btn primary">Abrir janela limpa</button>
+              <button id="stopApiBtn" class="btn danger">Parar</button>
+            </div>
+            <div class="action-row auth-row">
+              <button id="loginApiChatBtn" class="btn">Login pelo ChatGPT</button>
+              <button id="loginApiGoogleBtn" class="btn">Perfil Google Chrome</button>
+            </div>
+            <p class="hint">Use este canal apenas para o chat da API local.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-api" class="view">
+        <div class="split">
+          <div class="pane">
+            <h2>API Local</h2>
+            <p class="endpoint" id="localApiEndpoint">http://127.0.0.1:8765/chat</p>
+            <p class="hint">Uso local para testes no computador. O celular usa o gateway mobile, nao esta URL.</p>
+            <button id="startLocalApiBtn" class="btn primary">Iniciar API Local</button>
+          </div>
+          <div class="pane">
+            <h2>Status</h2>
+            <pre id="apiStatus" class="log-box">-</pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-project" class="view">
+        <div class="pane wide">
+          <h2>Projeto alvo</h2>
+          <div class="form-grid">
+            <label>
+              Pasta do projeto
+              <input id="projectDirInput" type="text">
+            </label>
+            <label>
+              Escopo de acesso
+              <select id="accessScopeSelect">
+                <option value="full">Full acesso</option>
+                <option value="computer">Este computador</option>
+                <option value="user">Perfil do usuario</option>
+                <option value="project">Somente projeto</option>
+              </select>
+            </label>
+            <label>
+              URL do app/site alvo
+              <input id="projectTargetUrlInput" type="url" placeholder="http://127.0.0.1:3000 ou https://...">
+            </label>
+            <label>
+              Gateway mobile
+              <input id="gatewayUrlInput" type="url" placeholder="https://run.oboneco.com.br">
+            </label>
+            <label>
+              Manifesto de atualizacao
+              <input id="updateManifestUrlInput" type="url" placeholder="https://raw.githubusercontent.com/.../update/latest.json">
+            </label>
+          </div>
+          <div class="action-row">
+            <button id="saveProjectConfigBtn" class="btn primary">Salvar configuracao</button>
+            <button id="selectProjectFolderBtn" class="btn">Selecionar pasta</button>
+            <button id="useRootFolderBtn" class="btn">Usar pasta do Boneco</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-logs" class="view">
+        <div class="pane wide">
+          <h2>Logs</h2>
+          <div class="action-row">
+            <button class="btn log-choice" data-log="terminal">Terminal tecnico</button>
+            <button class="btn log-choice" data-log="current-job.stdout.log">Job atual</button>
+            <button class="btn log-choice" data-log="current-job.stderr.log">Job erro</button>
+            <button class="btn log-choice" data-log="daemon-http.log">Daemon</button>
+            <button class="btn log-choice" data-log="launcher.log">Launcher</button>
+            <button class="btn log-choice" data-log="tray.log">Bandeja</button>
+            <button class="btn log-choice" data-log="overlay-bridge.stdout.log">Overlay</button>
+            <button class="btn log-choice" data-log="overlay-bridge.stderr.log">Overlay erro</button>
+            <button class="btn log-choice" data-log="device-agent.stderr.log">Agente erro</button>
+            <button class="btn log-choice" data-log="device-agent.stdout.log">Agente saida</button>
+            <button class="btn log-choice" data-log="local-api.stderr.log">API erro</button>
+          </div>
+          <pre id="logText" class="log-box tall">Selecione um log.</pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
